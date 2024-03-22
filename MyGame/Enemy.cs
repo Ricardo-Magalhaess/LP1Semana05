@@ -28,5 +28,20 @@ namespace MyGame
                 if(health < 0) health = 0;
             }
         }
+
+        public float GetHealth()
+        {
+            return health;
+        }
+        public float GetShield()
+        {
+            return shield;
+        }
+        public string SetName(string name){
+            const int MaxLength = 8;
+            if (name.Length > MaxLength)
+            name = name.Substring(0, MaxLength);
+            return name;
+        }
     }
 }
